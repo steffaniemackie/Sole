@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+body, ul, ol, figure, section, article, li {
+    margin:0;
+    padding:0;
+
+}
+
+a{
+	text-decoration:none;
+	color:grey;
+		
+}
+
+#body {
+	font-family:lato, arial, "trebuchet ms", sans-serif;
+    background:-webkit-radial-gradient(white,rgba(0,0,0,0.6));
+    height:100%;
+    width:100%;
+    background-size:contain;
+	position:fixed;
+	overflow:auto;
+  
+}
+
+
+header{
+    background:black;
+    color:white;
+    z-index:0;
+	position:relative;
+	
+}
+header:after {
+    content:'';
+    clear:both;
+    display:block;
+}
+header nav {
+    float:right;
+}
+header nav li {
+    display:inline-block; 
+}
+
+header img {
+    margin:0;
+    padding:0;
+    float:left;
+}
+header nav a {
+    color:white;
+    line-height:1em;
+    padding:0 1em;
+    text-decoration: none;
+    float:right;
+}
+
+header nav a img{
+    line-height:0em;
+    padding:0;
+    margin:0;
+}
+section[role=main] {
+    display:flex;
+    flex-flow:row wrap;
+    align-items:stretch;
+    align-content:center;
+    height:100%;
+    width:100%;
+    position:relative;
+    top:0;
+    left:0;    
+	z-index:999;
+}
+
+section[role=main] aside {
+    flex:1;
+    min-width:200px;
+    max-width:250px;
+    margin:auto;
+    border:1px solid #E7EEF2;
+    padding:2em;
+    background:rgb(216,216,216);
+}
+
+section[role=dashboard]{
+	display:flex;
+    flex-flow:row wrap;
+    align-items:stretch;
+    align-content:center;
+	width:100%;
+    position:relative;
+    top:0;
+    left:0;   
+	float:left; 
+	z-index:995;
+}
+section[role=dashboard] aside[role=stuff]{
+    min-width:200px;
+    max-width:800px;
+    margin:auto;
+    padding:0em;
+}
+
+form {
+    display:flex;
+    flex-flow:wrap;
+}
+
+form label {
+    display:inline-block; 
+    min-width:5em;
+    text-align:right;
+    flex:1;
+    color:#62686b
+}
+form label + input {
+    min-width:50%;
+    clear:right;
+    display:inline-block;
+    flex:2;
+    margin: 0 0 10px 10px;
+}
+
+form #button{
+    outline:white;
+    color:#62686b;
+    font-size:0.90em;
+    background-color:#d8d8d8;
+    border:solid white 1px;
+    padding: 2px 15px 2px 15px;
+    margin: 10px;  
+	text-transform:lowercase;
+}
+form #sign{
+    margin: 11px;   
+}
+form a {
+    color:#62686b;    
+}
+.clear {
+    clear:both;    
+
+}
+
+h1{
+    padding:0 0 10px 0;
+    margin:0;   
+}
+
+article[role=dashboardarticle]{
+	flex: 1;
+	margin: .5em;
+	border: 1px solid #E7EEF2;
+	padding: 1em 1em 1em 1.5em;
+	background: rgb(216,216,216);
+	float: left;	
+	max-width:800px;
+	min-width:200px;
+}
+
+article {
+	flex:1;
+    min-width:200px;
+    max-width:250px;
+    margin:.5em;
+    border:1px solid #E7EEF2;
+    padding:1em 1em 1em 1.5em;
+    background:rgb(216,216,216);
+	float:left;
+	
+	
+}
+article h2 {
+	/*shoe name*/ 
+	color:black; 
+	font-size:1.25em;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+
+article h3{
+	/*designer name*/
+	color:grey;
+	font-size:1em;
+	font-weight:normal;
+	
+	text-decoration:underline;
+	padding:0;
+	margin:.25em 0 1em 0;
+	text-transform:lowercase;
+}
+article h4{
+	/*shoe type*/ 
+	color:white;
+	font-size:.25em;
+	font-weight:normal;
+	border:thin white;
+	background:black;
+	padding: 5px;
+	text-transform:lowercase;
+	max-width:40px;
+	border-color:white;
+	border-style:solid;
+}
+article h5{
+	/*shoe collection*/	
+	color:black;
+	font-size:.75em;
+	text-decoration:underline;
+	text-transform:lowercase;
+	padding:0;
+	margin:0;
+}
+article p {
+	/*shoe description*/
+	font-size:.30em;
+	color:grey;
+	padding:0;
+	margin:1em 0; 
+}
+article small{
+	/*shoe price */	
+	font-size:.25em;
+	color:black;
+	padding:0;
+	margin:0;
+}
+article img{
+	max-width:200px;
+	padding:.25em 0 .25em 0;
+}
+
+h1[role=welcome]{
+	text-align:right;
+	font-weight:normal;
+	font-size:1em;
+	text-transform:lowercase;
+	padding: .5em 2.3em 0 0;	
+}
+
+h3[role=logout]{
+	font-weight:normal;
+	font-size:.75em;
+	text-transform:lowercase;
+	text-align:right;
+	padding:0 3em 0 0;	
+	margin:0;
+}
+article[role=backend]{
+	float:none;
+	margin:auto;	
+}
+article[role=backend] a{
+ 	outline:white;
+    color:#62686b;
+    font-size:0.90em;
+    background-color:#d8d8d8;
+    border:solid white 1px;
+    padding: 2px 15px 2px 15px;
+    margin: 1.25em 2.5em .25em;  	
+	display:inline-block;
+	text-decoration:none;
+	text-align:center;
+	max-width:9em;
+	min-width:9em;
+}
+
+
